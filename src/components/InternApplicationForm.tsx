@@ -293,6 +293,12 @@ export function InternApplicationForm() {
         body: JSON.stringify(formData),
       });
 
+      if (!response.headers.get('content-type')?.includes('application/json')) {
+        throw new Error(
+          'The application service is unavailable. This GitHub Pages site hosts the form only; submissions require the API server to be deployed.'
+        );
+      }
+
       const data = await response.json();
       if (!response.ok || data.status !== 'success') {
         throw new Error(data.message || 'Unable to submit your application right now.');

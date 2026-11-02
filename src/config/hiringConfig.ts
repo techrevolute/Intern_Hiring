@@ -8,8 +8,8 @@ export const HIRING_CONFIG = {
   partnerName: 'Grambytes Nexus Pvt. Ltd.',
   collaborationLabel: 'AI Institute Satana × Grambytes Nexus Pvt. Ltd.',
   motto: 'LEARN · EARN · GROW',
-  logoPath: '/logo.png',
-  posterPath: '/assets/aistudio/IMG_20261102_183802_14938f11.png',
+  logoPath: `${import.meta.env.BASE_URL}logo.png`,
+  posterPath: `${import.meta.env.BASE_URL}assets/aistudio/IMG_20261102_183802_14938f11.png`,
 
   // Top Bar Contract: 5 concise single-line navigation links
   navigation: [
